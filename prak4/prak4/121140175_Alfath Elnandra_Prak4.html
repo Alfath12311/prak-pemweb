@@ -1,0 +1,37 @@
+<!--Alfath Elnandra-->
+<!--121140175-->
+<!--RB-->
+<!DOCTYPE html>
+<html>
+    <head>
+<!-- Function yang disatukan dengan onclick akan berjalan saat button diklik-->
+<!-- parseint figunakan untuk mengubah variabel string menjadi integer dan document.getElementByID().value berguna untuk mengambil value dari ID yang berada di dokumen -->
+        <script>
+            <!-- Fungsi yang akan dijalankan saat button onclick di klik -->
+            function calculate(){
+                let number = parseInt(document.getElementById('number').value); 
+                let i; 
+                let genap = 0; 
+                let ganjil = 0; 
+                for(i=1; i<=number; i++){
+                     if(i%2 != 0){
+                        ganjil ++; 
+                    }else{ 
+                        genap ++; 
+                    } 
+                } 
+                document.getElementById('ganjil').value = ganjil; 
+                document.getElementById('genap').value = genap; 
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Menghitung Bilangan Ganjil dan Genap</h2>
+        <p>Masukkan bilangan bulat positif:</p>
+        <input type="number" id="number" name="number" />
+        <button onclick="calculate()">Hitung</button>
+        <p>Hasil:</p>
+        <p>Jumlah bilangan ganjil: <output id="ganjil"></output></p>
+        <p>Jumlah bilangan genap: <output id="genap"></output></p>
+    </body>
+</html>
