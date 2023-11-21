@@ -1,4 +1,7 @@
 <?php
+// Nama: Alfath Elnandra
+// NIM: 121140175
+// Kelas: RB
 
 class Orang { //mendeklarasikan class dan variabel
   public $nama;
